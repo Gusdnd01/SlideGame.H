@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Reset : MonoBehaviour
 {
+
     public void ResetButton()
     {
-        SceneManager.LoadScene("Play");
+        GameObject slideScript = GameObject.Find("Main Camera");
+        SlideGameScript ss = slideScript.GetComponent<SlideGameScript>();
+        ss.Suffle();
     }
 }
